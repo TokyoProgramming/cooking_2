@@ -1,0 +1,14 @@
+
+.env
+.idea/.gitignore
+.idea/cooking_2.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+app/
+cooking_2/
+manage.py
+static/
+templates/
+venv/
