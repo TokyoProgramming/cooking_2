@@ -1,2 +1,11 @@
 
-.env
+
+.idea/.gitignore
+.idea/cooking_2.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+__pycache__/
+
+venv/.env
