@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .env
 .gitignore
+.manage.py
 .idea/.gitignore
 .idea/cooking_2.iml
 .idea/inspectionProfiles/
