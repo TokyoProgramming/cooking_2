@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'account',
 
     'django_otp',
     'django_otp.plugins.otp_static',
@@ -161,3 +162,6 @@ LOGGING = {
         }
     }
 }
+
+
+AUTH_USER_MODEL = 'account.UserProfile'
