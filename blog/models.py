@@ -13,7 +13,7 @@ FIELD_CHOICES = (
 
 class featuredPost(models.Model):
     featured_field = models.CharField(choices=FIELD_CHOICES, max_length=20, default=None)
-    featured_tittle = models.CharField(max_length=10)
+    featured_tittle = models.CharField(max_length=100)
     featured_text = models.TextField(max_length=300)
     featured_image = models.ImageField(upload_to='featuredImage')
 
@@ -26,3 +26,6 @@ class Post(models.Model):
     blog_tittle = models.CharField(max_length=20)
     blog_text = models.TextField(max_length=500)
     blog_image = models.ImageField(upload_to='blogImage')
+
+    def __str__(self):
+        return self.blog_field
