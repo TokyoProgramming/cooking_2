@@ -1,10 +1,8 @@
-
 from pathlib import Path
 import environ, os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the cooking_2 like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 env = environ.Env()
 # reading .env file
@@ -19,7 +17,6 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -30,17 +27,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.admin',
+
     'app',
     'account',
+    'blog',
+    'contact',
 
-    'django_otp',
-    'django_otp.plugins.otp_static',
-    'django_otp.plugins.otp_totp',
-    'two_factor',
-    'otp_yubikey',
+
+    # 'django_otp',
+    # 'django_otp.plugins.otp_static',
+    # 'django_otp.plugins.otp_totp',
+    # 'two_factor',
+    # 'otp_yubikey',
 ]
-
-
 
 MIDDLEWARE = [
 
@@ -53,14 +53,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-
     # OPT AUTH
     'django_otp.middleware.OTPMiddleware',
     'two_factor.middleware.threadlocals.ThreadLocals',
 
 ]
 
-LOGIN_URL = 'two_factor:login'
+# LOGIN_URL = 'two_factor:login'
 
 ROOT_URLCONF = 'cooking_2.urls'
 
@@ -102,7 +101,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -119,7 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
@@ -130,7 +127,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 
@@ -144,7 +140,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = (
     os.path.join(BASE_DIR, 'media')
 )
-
 
 LOGGING = {
     'version': 1,
@@ -163,5 +158,12 @@ LOGGING = {
     }
 }
 
-
 AUTH_USER_MODEL = 'account.UserProfile'
+
+#  Messages
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+
+}

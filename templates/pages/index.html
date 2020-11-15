@@ -1,230 +1,342 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% load static %}
+
+{% block title %}| WELCOME{% endblock %}
 
 <!-- featured post -->
 {% block featured_post %}
-<section>
-  <div class="container-fluid p-sm-0">
-    <div class="row featured-post-slider">
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
-        <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{% static 'images/featured-post/post-1.jpg' %}" alt="post-thumb">
-          <div class="card-img-overlay">
-            <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10 Simple rule</a></h4>
-              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+
+    <section>
+
+        <div class="container-fluid p-sm-0">
+            <div class="row featured-post-slider">
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                    <article class="card bg-dark text-center text-white border-0 rounded-0">
+                        <img class="card-img rounded-0 img-fluid w-100"
+                             src="{% static 'images/featured-post/post-1.jpg' %}" alt="post-thumb">
+                        <div class="card-img-overlay">
+                            <div class="card-content">
+                                <p class="text-uppercase">LifeStyle</p>
+                                <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your
+                                    Life With 10 Simple rule</a></h4>
+                                <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                    <article class="card bg-dark text-center text-white border-0 rounded-0">
+                        <img class="card-img rounded-0 img-fluid w-100"
+                             src="{% static 'images/featured-post/post-2.jpg' %}" alt="post-thumb">
+                        <div class="card-img-overlay">
+                            <div class="card-content">
+                                <p class="text-uppercase">Philosophy</p>
+                                <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your
+                                    Life With 10
+                                    Simple rule</a></h4>
+                                <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                    <article class="card bg-dark text-center text-white border-0 rounded-0">
+                        <img class="card-img rounded-0 img-fluid w-100"
+                             src="{% static 'images/featured-post/post-3.jpg' %}" alt="post-thumb">
+                        <div class="card-img-overlay">
+                            <div class="card-content">
+                                <p class="text-uppercase">Fashion</p>
+                                <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your
+                                    Life With 10
+                                    Simple rule</a></h4>
+                                <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                    <article class="card bg-dark text-center text-white border-0 rounded-0">
+                        <img class="card-img rounded-0 img-fluid w-100"
+                             src="{% static 'images/featured-post/post-4.jpg' %}" alt="post-thumb">
+                        <div class="card-img-overlay">
+                            <div class="card-content">
+                                <p class="text-uppercase">Article</p>
+                                <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your
+                                    Life With 10
+                                    Simple rule</a></h4>
+                                <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+                    <article class="card bg-dark text-center text-white border-0 rounded-0">
+                        <img class="card-img rounded-0 img-fluid w-100"
+                             src="{% static 'images/featured-post/post-5.jpg' %}" alt="post-thumb">
+                        <div class="card-img-overlay">
+                            <div class="card-content">
+                                <p class="text-uppercase">Nature</p>
+                                <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your
+                                    Life With 10
+                                    Simple rule</a></h4>
+                                <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
-        <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{% static 'images/featured-post/post-2.jpg' %}" alt="post-thumb">
-          <div class="card-img-overlay">
-            <div class="card-content">
-              <p class="text-uppercase">Philosophy</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
-              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Update featured post
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+                    <div class="modal-body">
+
+
+                        <form action="{% url 'index' %}" method="post">
+                            {% csrf_token %}
+                            <label for="featured_field" class="col-form-label">featured_field:</label>
+                            <input name="featured_field" class="form-control" value="">
+                            <label for="featured_tittle" class="col-form-label">featured_tittle:</label>
+                            <input type="text" name="featured_tittle" class="form-control" value="">
+                            <label for="featured_text" class="col-form-label">featured_text:</label>
+                            <input type="text" name="featured_text" class="form-control" value="">
+                            <label for="featured_image" class="col-form-label">featured_image:</label>
+                            <input type="text" name="featured_image" class="form-control" value="">
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">update</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
-        <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{% static 'images/featured-post/post-3.jpg' %}" alt="post-thumb">
-          <div class="card-img-overlay">
-            <div class="card-content">
-              <p class="text-uppercase">Fashion</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
-              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
-        <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{% static 'images/featured-post/post-4.jpg' %}" alt="post-thumb">
-          <div class="card-img-overlay">
-            <div class="card-content">
-              <p class="text-uppercase">Article</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
-              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
-            </div>
-          </div>
-        </article>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
-        <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{% static 'images/featured-post/post-5.jpg' %}" alt="post-thumb">
-          <div class="card-img-overlay">
-            <div class="card-content">
-              <p class="text-uppercase">Nature</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
-              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+
+
+    </section>
 {% endblock %}
 <!-- /featured post -->
 
 <!-- blog post -->
 {% block posts %}
+
+
+
     <section class="section">
-  <div class="container">
-    <div class="row masonry-container">
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-1.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-2.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-3.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-4.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-5.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-6.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-7.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-8.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-9.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-10.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-11.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-13.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <article class="text-center">
-          <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-12.jpg' %}" alt="post-thumb">
-          <p class="text-uppercase mb-2">TRAVEL</p>
-          <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-          <a href="blog-single.html" class="btn btn-transparent">read more</a>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="container">
+            <div class="row masonry-container">
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-1.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-2.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-3.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-4.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-5.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-6.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-7.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-8.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-9.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-10.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-11.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-13.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <article class="text-center">
+                        <img class="img-fluid mb-4" src="{% static 'images/masonary-post/post-12.jpg' %}"
+                             alt="post-thumb">
+                        <p class="text-uppercase mb-2">TRAVEL</p>
+                        <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a>
+                        </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex
+                            ea commodo consequat.</p>
+                        <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -1,5 +1,5 @@
 """
-ASGI config for cooking_2 project.
+ASGI config for cooking_2 cooking_2.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

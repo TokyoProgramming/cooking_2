@@ -3,32 +3,44 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Parsa | Portfolio Template</title>
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="{% static '/plugins/bootstrap/bootstrap.min.css' %}">
-  <!-- slick slider -->
-  <link rel="stylesheet" href="{% static '/plugins/slick/slick.css' %}">
-  <!-- themefy-icon -->
-  <link rel="stylesheet" href="{% static '/plugins/themify-icons/themify-icons.css' %}">
-  <!-- Main Stylesheet -->
-  <link href="{% static '/css/style.css' %}" rel="stylesheet">
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <meta charset="utf-8">
+
+
+    <title>Parsa  {% block title %}{% endblock %}</title>
+
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static '/plugins/bootstrap/bootstrap.min.css' %}">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="{% static '/plugins/slick/slick.css' %}">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="{% static '/plugins/themify-icons/themify-icons.css' %}">
+    <!-- Main Stylesheet -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <!-- Login -->
+    <link href="{% static '/css/account/login.css' %}" rel="stylesheet">
+    <link href="{% static '/css/account/util.css' %}" rel="stylesheet">
+
+    <!-- signup -->
+    <link href="{% static '/css/account/signup.css' %}" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
 <!-- header -->
-{%  include 'partials/header.html' %}
+{% include 'partials/header.html' %}
 
-
+<!-- account -->
+{% block account %}{% endblock %}
 
 <!-- featured post -->
 {% block featured_post %}{% endblock %}
+
 <!-- blog post -->
 {% block posts %}{% endblock %}
 
@@ -48,28 +60,29 @@
 {% block category %}{% endblock %}
 
 <!-- pagination -->
-{%  include 'partials/pagination.html' %}
+{% include 'partials/pagination.html' %}
+
 <!-- footer -->
-{%  include 'partials/footer.html' %}
+{% include 'partials/footer.html' %}
 
 <!-- jQuery -->
-  <script src="{% static '/plugins/jQuery/jquery.min.js' %}"></script>
+<script src="{% static '/plugins/jQuery/jquery.min.js' %}"></script>
 <!-- Bootstrap JS -->
-  <script src="{% static '/plugins/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static '/plugins/bootstrap/bootstrap.min.js' %}"></script>
 <!-- slick slider -->
-  <script src="{% static '/plugins/slick/slick.min.js' %}"></script>
+<script src="{% static '/plugins/slick/slick.min.js' %}"></script>
 <!-- masonry -->
-  <script src="{% static '/plugins/masonry/masonry.js' %}"></script>
+<script src="{% static '/plugins/masonry/masonry.js' %}"></script>
 <!-- instafeed -->
 {#  <script src="{% static '/plugins/instafeed/instafeed.min.js' %}"></script>#}
 <!-- smooth scroll -->
 {#  <script src="{% static '/plugins/smooth-scroll/smooth-scroll.js' %}"></script>#}
 <!-- headroom -->
-  <script src="{% static '/plugins/headroom/headroom.js' %}"></script>
+<script src="{% static '/plugins/headroom/headroom.js' %}"></script>
 <!-- reading time -->
-  <script src="{% static '/plugins/reading-time/readingTime.min.js' %}"></script>
+<script src="{% static '/plugins/reading-time/readingTime.min.js' %}"></script>
 <!-- Main Script -->
-  <script src="{% static '/js/script.js' %}"></script>
+<script src="{% static '/js/script.js' %}"></script>
 
 </body>
 </html>

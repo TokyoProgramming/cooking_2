@@ -1,5 +1,5 @@
 """
-WSGI config for cooking_2 project.
+WSGI config for cooking_2 cooking_2.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

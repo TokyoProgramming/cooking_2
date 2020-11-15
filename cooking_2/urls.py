@@ -1,6 +1,6 @@
-
 from django.contrib import admin
 from django.urls import path, include
+
 # from two_factor.urls import urlpatterns as tf_urls
 # from two_factor.gateways.twilio.urls import urlpatterns as tf_twilio_urls
 
@@ -12,10 +12,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('app.urls')),
+    path('app/', include('app.urls')),
     path('account/', include('account.urls')),
+    path('', include('blog.urls')),
+    path('contact/', include('contact.urls')),
+
     # path('', include(tf_urls)),
     # path('', include(tf_twilio_urls)),
-
 
 ]
