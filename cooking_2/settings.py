@@ -33,10 +33,8 @@ INSTALLED_APPS = [
     'account',
     'blog',
     'contact',
+    'bootstrap_modal_forms',
 
-    # 'django_otp',
-    # 'django_otp.plugins.otp_static',
-    # 'django_otp.plugins.otp_totp',
     # 'two_factor',
     # 'otp_yubikey',
 ]

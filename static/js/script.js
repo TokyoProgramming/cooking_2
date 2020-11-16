@@ -2,21 +2,24 @@
   'use strict';
 
   // Preloader js
-  $(window).on('load', function () {
-    $('.preloader').fadeOut(700);
-  });
+  // var $jq = jQuery.noConflict();
+  // $jq(window).on('load', function () {
+  //   $('.preloader').fadeOut(700);
+  // });
+  //
+  // // headroom js
+  // $('.navigation').headroom();
+  //
+  // // Background-images
+  // $('[data-background]').each(function () {
+  //   $(this).css({
+  //     'background-image': 'url(' + $(this).data('background') + ')'
+  //   });
+  // });
 
-  // headroom js
-  $('.navigation').headroom();
 
-  // Background-images
-  $('[data-background]').each(function () {
-    $(this).css({
-      'background-image': 'url(' + $(this).data('background') + ')'
-    });
-  });
-
-  $('.featured-post-slider').slick({
+  var $jq = jQuery.noConflict();
+  $jq('.featured-post-slider').slick({
     dots: false,
     speed: 300,
     autoplay: true,
@@ -97,6 +100,4 @@
   });
 })(jQuery);
 
-setTimeout(function (){
-    $('#messages').fadeOut('slow');
-},3000);
+

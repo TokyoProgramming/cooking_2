@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
 
-    <title>Parsa  {% block title %}{% endblock %}</title>
+    <title>Parsa {% block title %}{% endblock %}</title>
 
 
     <!-- mobile responsive meta -->
@@ -38,6 +38,12 @@
 <!-- account -->
 {% block account %}{% endblock %}
 
+<!-- test -->
+{% block test %}{% endblock %}
+
+<!-- success -->
+{% block success %}{% endblock %}
+
 <!-- featured post -->
 {% block featured_post %}{% endblock %}
 
@@ -65,12 +71,20 @@
 <!-- footer -->
 {% include 'partials/footer.html' %}
 
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- jQuery -->
-<script src="{% static '/plugins/jQuery/jquery.min.js' %}"></script>
-<!-- Bootstrap JS -->
-<script src="{% static '/plugins/bootstrap/bootstrap.min.js' %}"></script>
+{#<script src="{% static '/plugins/jQuery/jquery.min.js' %}"></script>#}
+{##}
+{#<!-- Bootstrap JS -->#}
+{#<script src="{% static '/plugins/bootstrap/bootstrap.min.js' %}"></script>#}
 <!-- slick slider -->
-<script src="{% static '/plugins/slick/slick.min.js' %}"></script>
+{#<script src="{% static '/plugins/slick/slick.min.js' %}"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
 <!-- masonry -->
 <script src="{% static '/plugins/masonry/masonry.js' %}"></script>
 <!-- instafeed -->
@@ -83,6 +97,14 @@
 <script src="{% static '/plugins/reading-time/readingTime.min.js' %}"></script>
 <!-- Main Script -->
 <script src="{% static '/js/script.js' %}"></script>
+<!-- Test Script -->
+<script src="{% static '/js/test.js' %}"></script>
+<!-- Popper CDN -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<!-- Modal bootstrap js file -->
+<script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+<!-- Modal bootstrap js file -->
+{#<script src="{% static 'js/timeOut.js' %}"></script>#}
 
 </body>
 </html>

@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.generic.base import TemplateView
+from django.views.generic.edit import CreateView
 from django.contrib import messages
 from .models import featuredPost, Post
+from .forms import f_postForm, PostForm
+
 
 
 def index(request):
@@ -14,29 +19,13 @@ def index(request):
 
 
 
-# def index(request):
-# if request.method == 'POST':
-#     featured_field = request.POST['featured_field']
-#     featured_title = request.POST['featured_title']
-#     featured_text = request.POST['featured_text']
-#     featured_image = request.POST['featured_image']
-#
-#     featured_post = featuredPost.objects.create(
-#         featured_field=featured_field,
-#         featured_title=featured_title,
-#         featured_text=featured_text,
-#         featured_image=featured_image
-#     )
-#
-#     featured_post.save()
-#     return render(request, 'pages/index.html')
-#
-#
-# elif request.method== 'GET':
-#
-#
-#     return render(request, 'pages/index.html')
+class TestFormView(CreateView):
+    template_name = 'test/create_test.html'
+    form_class = f_postForm
+    success_url = reverse_lazy('success_view')
 
-# return render(request, 'pages/index.html')
 
+
+class SuccessView(TemplateView):
+    template_name = "test/success.html"
 
