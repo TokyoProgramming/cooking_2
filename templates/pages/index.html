@@ -18,10 +18,10 @@
                             <div class="card-img-overlay">
                                 <div class="card-content">
                                     <p class="text-uppercase">{{ f_post.featured_field }}</p>
-                                    <h4 class="card-title mb-4"><a class="text-white"
-                                                                   href="blog-single.html">{{ f_post.featured_tittle }}</a>
+                                    <h4 class="card-title mb-4">
+{#                                        <a class="text-white" href="{% url 'blog-single' f_post.id %}">{{ f_post.featured_tittle }}</a>#}
                                     </h4>
-                                    <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+                                    <a class="btn btn-outline-light" href="#">read more</a>
                                 </div>
                             </div>
 
@@ -32,6 +32,7 @@
             </div>
         </div>
         <!-- featured_posts end -->
+
         <!-- Modal test -->
         <div class="modal fade" tabindex="-1" role="dialog" id="modal">
             <div class="modal-dialog" role="document">
@@ -47,50 +48,6 @@
         </button>
 
         <!-- end modal test -->
-
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Update featured post
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-
-
-                    <div class="modal-body">
-
-
-                        <form action="{% url 'index' %}" method="post">
-                            {% csrf_token %}
-                            <label for="featured_field" class="col-form-label">featured_field:</label>
-                            <input name="featured_field" class="form-control" value="">
-                            <label for="featured_tittle" class="col-form-label">featured_tittle:</label>
-                            <input type="text" name="featured_tittle" class="form-control" value="">
-                            <label for="featured_text" class="col-form-label">featured_text:</label>
-                            <input type="text" name="featured_text" class="form-control" value="">
-                            <label for="featured_image" class="col-form-label">featured_image:</label>
-                            <input type="text" name="featured_image" class="form-control" value="">
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">update</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Modal end -->
 
 
     </section>
@@ -109,16 +66,73 @@
                                  alt="post-thumb">
                             <p class="text-uppercase mb-2">{{ post.blog_field }}</p>
                             <h4 class="title-border"><a class="text-dark"
-                                                        href="blog-single.html">{{ post.blog_tittle }}</a>
+                                                        href={% url 'blog-single' post.id  %}>{{ post.blog_tittle }}</a>
                             </h4>
                             <p>{{ post.blog_text }}</p>
-                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                            <a href="{% url 'blog-single' post.id %}" class="btn btn-transparent">read more</a>
                         </article>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
+
+
     <!-- end blog-post  -->
 
 {% endblock %}
+{% block pagination %}
+    {#    <div class="container">#}
+    <div class="row">
+        <div class="col-12">
+
+            {% if posts.has_other_pages %}
+                <ul class="pagination justify-content-center align-items-center">
+                    {% if posts.has_previous %}
+                        <li class="page-item">
+                            <a href="?page={{ pages.previous_page_number }}" class="page-link">&laquo;</a>
+
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">&laquo;</a>
+                        </li>
+
+                    {% endif %}
+
+
+                    {% for i in posts.paginator.page_range %}
+
+                        {% if posts.number == i %}
+                            <li class="page-item" active>
+                                <a class="page-link">{{ i }}</a>
+                            </li>
+                        {% else %}
+                            <li class="page-item">
+                                <a href="?page={{ i }}" class="page-link">{{ i }}</a>
+
+                            </li>
+
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if posts.has_next %}
+                        <li class="page-item">
+                            <a href="?page={{ pages.next_page_number }}" class="page-link">&raquo;</a>
+
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link">&raquo;</a>
+                        </li>
+
+                    {% endif %}
+
+                </ul>
+            {% endif %}
+
+        </div>
+    </div>
+    {#    </div>#}
+{% endblock %}
+

@@ -13,13 +13,14 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('app/', include('app.urls')),
-    path('account/', include('account.urls')),
-    path('', include('blog.urls')),
-    path('contact/', include('contact.urls')),
 
-    # path('', include(tf_urls)),
-    # path('', include(tf_twilio_urls)),
+                  path('admin/', admin.site.urls),
 
-] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('', include('blog.urls')),
+
+                  path('app/', include('app.urls')),
+                  path('account/', include('account.urls')),
+
+                  path('contact/', include('contact.urls')),
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

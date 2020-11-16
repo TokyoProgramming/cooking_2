@@ -22,9 +22,11 @@ class featuredPost(models.Model):
 
 
 class Post(models.Model):
+
     blog_field = models.CharField(choices=FIELD_CHOICES, max_length=20, default=None)
     blog_tittle = models.CharField(max_length=20)
     blog_text = models.TextField(max_length=500)
+    published_date = models.DateTimeField(auto_now=True)
     blog_image = models.ImageField(upload_to='blogImage')
 
     def __str__(self):

@@ -2,24 +2,24 @@
   'use strict';
 
   // Preloader js
-  // var $jq = jQuery.noConflict();
-  // $jq(window).on('load', function () {
-  //   $('.preloader').fadeOut(700);
-  // });
-  //
-  // // headroom js
-  // $('.navigation').headroom();
-  //
-  // // Background-images
-  // $('[data-background]').each(function () {
-  //   $(this).css({
-  //     'background-image': 'url(' + $(this).data('background') + ')'
-  //   });
-  // });
+
+  $(window).on('load', function () {
+    $('.preloader').fadeOut(700);
+  });
+
+  // headroom js
+  $('.navigation').headroom();
+
+  // Background-images
+  $('[data-background]').each(function () {
+    $(this).css({
+      'background-image': 'url(' + $(this).data('background') + ')'
+    });
+  });
 
 
-  var $jq = jQuery.noConflict();
-  $jq('.featured-post-slider').slick({
+
+  $('.featured-post-slider').slick({
     dots: false,
     speed: 300,
     autoplay: true,

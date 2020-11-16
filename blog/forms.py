@@ -1,8 +1,9 @@
 from django import forms
+from bootstrap_modal_forms.forms import BSModalModelForm
 from .models import featuredPost, Post
 
 
-class f_postForm(forms.ModelForm):
+class f_postForm(BSModalModelForm):
     class Meta:
         model = featuredPost
         fields = [
@@ -14,7 +15,7 @@ class f_postForm(forms.ModelForm):
 
 
 
-class PostForm(forms.ModelForm):
+class PostForm(BSModalModelForm):
     class Meta:
         model = Post
         fields = [
