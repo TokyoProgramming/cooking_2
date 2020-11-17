@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    # 'django.contrib.admin',
+
 
     'app',
     'account',
@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'contact',
     'bootstrap_modal_forms',
 
-    # 'two_factor',
-    # 'otp_yubikey',
+
 ]
 
 MIDDLEWARE = [
@@ -141,7 +140,6 @@ MEDIA_ROOT = (
     os.path.join(BASE_DIR, 'media')
 )
 
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -168,3 +166,4 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 
 }
+

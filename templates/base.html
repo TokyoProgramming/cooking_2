@@ -1,4 +1,7 @@
 {% load static %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +25,8 @@
     <link rel="stylesheet" href="{% static '/plugins/themify-icons/themify-icons.css' %}">
     <!-- Main Stylesheet -->
     <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <!-- breadcrub Stylesheet -->
+    <link href="{% static '/css/breadcrumb.css' %}" rel="stylesheet">
     <!-- Login -->
     <link href="{% static '/css/account/login.css' %}" rel="stylesheet">
     <link href="{% static '/css/account/util.css' %}" rel="stylesheet">
@@ -36,6 +41,8 @@
 
 <!-- preloader -->
 {% include 'partials/preloader.html' %}
+
+
 
 <!-- featured post -->
 {% block featured_post %}{% endblock %}

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto ">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent breadcrumb-dividers-chevron">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+
+                    {% if request.GET.keywords %}
+                        <li class="breadcrumb-item"><a href="{% url 'search' %}">Search</a></li>
+                    {% else %}
+                        <li class="breadcrumb-item active"><a href="{% url 'search' %}">Search</a></li>
+                    {% endif %}
+
+                    <li class="breadcrumb-item active" aria-current="page"><a href="# ">{{ request.GET.keywords }}</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+

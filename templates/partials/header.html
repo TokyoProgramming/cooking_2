@@ -17,32 +17,40 @@
         <div class="collapse navbar-collapse text-center" id="navogation">
 
 
-            <ul class="navbar-nav ml-auto">
+            <ul class="nav-tabs navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-dark" href={% url 'index' %}>Home</a>
+                    {% if '/' == request.path %}
+                        <a class="nav-link text-uppercase text-dark active" href={% url 'index' %}>Home</a>
+                    {% else %}
+                        <a class="nav-link text-uppercase text-dark" href={% url 'index' %}>Home</a>
+                    {% endif %}
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-dark" href={% url 'about' %}>About</a>
+                    {% if 'about' in request.path %}
+                        <a class="nav-link text-uppercase text-dark active" href={% url 'about' %}>about</a>
+                    {% else %}
+                        <a class="nav-link text-uppercase text-dark" href={% url 'about' %}>about</a>
+                    {% endif %}
                 </li>
                 {% if user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-dark" href={% url 'create-blog' %}>CreateBlog</a>
+                        {% if 'create-blog' in request.path %}
+                            <a class="nav-link text-uppercase text-dark active"
+                               href={% url 'create-blog' %}>CreateBlog</a>
+                        {% else %}
+                            <a class="nav-link text-uppercase text-dark" href={% url 'create-blog' %}>CreateBlog</a>
+                        {% endif %}
                     </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link text-uppercase text-dark" href={% url 'contact' %}>Contact</a>
+                    {% if 'contact' in request.path %}
+                        <a class="nav-link text-uppercase text-dark active" href={% url 'contact' %}>contact</a>
+                    {% else %}
+                        <a class="nav-link text-uppercase text-dark" href={% url 'contact' %}>contact</a>
+                    {% endif %}
                 </li>
-            </ul>
 
-            <form action="{% url 'search' %}" class="form-inline position-relative ml-lg-4">
-                <input class="form-control px-0 w-100" name="keywords" type="search" placeholder="Search">
-                <!-- <button class="search-icon" type="submit"><i class="ti-search text-dark"></i></button> -->
-                <a href={% url 'search' %} class="search-icon"><i class="ti-search text-dark"></i></a>
-            </form>
-
-
-            <ul class="navbar-nav">
 
                 {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -58,7 +66,11 @@
                 {% endif %}
 
             </ul>
-
+            <form action="{% url 'search' %}" class="form-inline position-relative ml-lg-4">
+                <input class="form-control px-0 w-100" name="keywords" type="search" placeholder="Search">
+                <!-- <button class="search-icon" type="submit"><i class="ti-search text-dark"></i></button> -->
+{#                <a href={% url 'search' %} class="search-icon"><i class="ti-search text-dark"></i></a>#}
+            </form>
         </div>
     </nav>
 </header>
