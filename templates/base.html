@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
 
 
@@ -32,60 +33,37 @@
 <body>
 <!-- header -->
 {% include 'partials/header.html' %}
+
+<!-- preloader -->
+{% include 'partials/preloader.html' %}
+
 <!-- featured post -->
 {% block featured_post %}{% endblock %}
+
+<!-- blog post -->
+{% block posts %}{% endblock %}
+
+<!-- about -->
+{% block about %}{% endblock %}
+
+<!-- blog create -->
+{% block create_blog %}{% endblock %}
+
+<!-- contact  -->
+{% block contact %}{% endblock %}
+
+<!-- search  -->
+{% block search %}{% endblock %}
+
+<!-- blog-single -->
+{% block blog-single %}{% endblock %}
 
 
 <!-- account -->
 {% block account %}{% endblock %}
 
-
-
-
-<!-- blog post -->
-{% block posts %}{% endblock %}
-{##}
-{#<!-- pagination -->#}
-{#{% block pagination %}{% endblock %}#}
-
-
-<!-- blog create -->
-{% block create_blog %}{% endblock %}
-
-
-<!-- about -->
-{% block about %}{% endblock %}
-
-<!-- search  -->
-{% block search %}{% endblock %}
-
-<!-- homepage-2 -->
-{% block homepage-2 %}{% endblock %}
-
-<!-- contact  -->
-{% block contact %}{% endblock %}
-
-<!-- category  -->
-{% block category %}{% endblock %}
-<!-- test -->
-{% block test %}{% endblock %}
-
-<!-- success -->
-{% block success %}{% endblock %}
-
-<!-- blog-single -->
-{% block blog-single %}{% endblock %}
-
-{#<!-- pagination -->#}
-{#{% include 'partials/pagination.html' %}#}
-
-
-
 <!-- footer -->
 {% include 'partials/footer.html' %}
-
-
-
 
 
 <!-- jQuery -->

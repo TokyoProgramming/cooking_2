@@ -3,6 +3,8 @@
 
 {% block title %}| WELCOME{% endblock %}
 
+
+
 <!-- featured post -->
 {% block featured_post %}
 
@@ -24,7 +26,8 @@
                                            href="{% url 'blog-single' f_post.id %}">{{ f_post.featured_tittle }}</a>
                                     </h4>
 
-                                    <a class="btn btn-outline-light" href="app/search/?keywords={{ f_post.featured_field }}">read more</a>
+                                    <a class="btn btn-outline-light"
+                                       href="app/search/?keywords={{ f_post.featured_field }}">read more</a>
                                 </div>
                             </div>
 
@@ -82,12 +85,11 @@
         </div>
     </section>
 
-
     <!-- end blog-post  -->
 
-{% endblock %}
-{% block pagination %}
-    {#    <div class="container">#}
+
+    <!-- Pagination -->
+
     <div class="row">
         <div class="col-12">
 
@@ -138,6 +140,8 @@
 
         </div>
     </div>
-    {#    </div>#}
+
+    <!-- End Pagination -->
+
 {% endblock %}
 

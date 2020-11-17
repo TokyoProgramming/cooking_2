@@ -7,20 +7,6 @@
 
 
 {% block blog-single %}
-    <!-- preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- /preloader -->
-
-
 
     <!-- page-title -->
     <section class="section bg-secondary">
@@ -41,7 +27,8 @@
                 <div class="col-lg-8">
                     <ul class="list-inline d-flex justify-content-between py-3">
                         <li class="list-inline-item"><i class="ti-user mr-2"></i>Post by Jhon Abraham</li>
-                        <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{ single_blog.published_date | naturaltime }}</li>
+                        <li class="list-inline-item"><i
+                                class="ti-calendar mr-2"></i>{{ single_blog.published_date | naturaltime }}</li>
                     </ul>
                     <img src="{{ MEDIA_URL }}{{ single_blog.blog_image }}" alt="post-thumb"
                          class="w-100 img-fluid mb-4">
@@ -89,35 +76,35 @@
                             </div>
                         {% endfor %}
 
-                    <div class="widget">
-                        <h6 class="mb-4">TAG</h6>
-                        <ul class="list-inline tag-list">
-                            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
-                        </ul>
-                    </div>
-                    <div class="widget">
-                        <h6 class="mb-4">CATEGORIES</h6>
-                        <ul class="list-inline tag-list">
-                            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
-                            <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
-                        </ul>
+                        <div class="widget">
+                            <h6 class="mb-4">TAG</h6>
+                            <ul class="list-inline tag-list">
+                                <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget">
+                            <h6 class="mb-4">CATEGORIES</h6>
+                            <ul class="list-inline tag-list">
+                                <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                                <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- /blog single -->
 
