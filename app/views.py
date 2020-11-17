@@ -1,11 +1,6 @@
 from django.shortcuts import render
 from blog.models import Post
 
-
-
-
-
-
 def about(request):
     return render(request, 'pages/about.html')
 
@@ -28,11 +23,3 @@ def search(request):
 
 
 
-
-#
-# def homepage_2(request):
-#     return render(request, 'pages/homepage-2.html')
-#
-#
-# def category(request):
-#     return render(request, 'pages/category.html')

@@ -29,7 +29,6 @@ def signup_view(request):
                         password=password)
                     user.save()
                     messages.success(request, 'you are now sign up')
-                    print('user create ')
                     return redirect('login')
         else:
             messages.error(request, 'passwords do not match')
