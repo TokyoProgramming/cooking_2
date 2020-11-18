@@ -51,17 +51,29 @@
                     {% endif %}
                 </li>
 
-
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-dark" href={% url 'logout' %}>Logout</a>
+                        {% if 'logout' in request.path %}
+                            <a class="nav-link text-uppercase text-dark active" href={% url 'logout' %}>logout</a>
+                        {% else %}
+                            <a class="nav-link text-uppercase text-dark" href={% url 'logout' %}>logout</a>
+                        {% endif %}
                     </li>
                 {% else %}
+
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-dark" href={% url 'login' %}>Login</a>
+                        {% if 'login' in request.path %}
+                            <a class="nav-link text-uppercase text-dark active" href={% url 'login' %}>login</a>
+                        {% else %}
+                            <a class="nav-link text-uppercase text-dark" href={% url 'login' %}>login</a>
+                        {% endif %}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase text-dark" href={% url 'signup' %}>SignUp</a>
+                        {% if 'signup' in request.path %}
+                            <a class="nav-link text-uppercase text-dark active" href={% url 'signup' %}>signup</a>
+                        {% else %}
+                            <a class="nav-link text-uppercase text-dark" href={% url 'signup' %}>signup</a>
+                        {% endif %}
                     </li>
                 {% endif %}
 
@@ -69,7 +81,7 @@
             <form action="{% url 'search' %}" class="form-inline position-relative ml-lg-4">
                 <input class="form-control px-0 w-100" name="keywords" type="search" placeholder="Search">
                 <!-- <button class="search-icon" type="submit"><i class="ti-search text-dark"></i></button> -->
-{#                <a href={% url 'search' %} class="search-icon"><i class="ti-search text-dark"></i></a>#}
+                {#                <a href={% url 'search' %} class="search-icon"><i class="ti-search text-dark"></i></a>#}
             </form>
         </div>
     </nav>

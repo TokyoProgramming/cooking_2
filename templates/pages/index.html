@@ -3,8 +3,7 @@
 
 {% block title %}| WELCOME{% endblock %}
 
-
-
+blog-single
 <!-- featured post -->
 {% block featured_post %}
 
@@ -23,7 +22,7 @@
 
                                     <h4 class="card-title mb-4">
                                         <a class="text-white"
-                                           href="{% url 'blog-single' f_post.id %}">{{ f_post.featured_tittle }}</a>
+                                           href="{% url 'blog-detail' f_post.id %}">{{ f_post.featured_tittle }}</a>
                                     </h4>
 
                                     <a class="btn btn-outline-light"
@@ -74,10 +73,10 @@
                                  alt="post-thumb">
                             <p class="text-uppercase mb-2">{{ post.blog_field }}</p>
                             <h4 class="title-border"><a class="text-dark"
-                                                        href={% url 'blog-single' post.id %}>{{ post.blog_tittle }}</a>
+                                                        href={% url 'blog-detail' post.id %}>{{ post.blog_tittle }}</a>
                             </h4>
                             <p>{{ post.blog_text }}</p>
-                            <a href="{% url 'blog-single' post.id %}" class="btn btn-transparent">read more</a>
+                            <a href="{% url 'blog-detail' post.id %}" class="btn btn-transparent">read more</a>
                         </article>
                     </div>
                 {% endfor %}
